@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mycanvas{
+				border: 1px solid #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+		<script type="text/javascript">
+			window.onload=function draw(){
+				var c=document.getElementById("mycanvas");
+				c.width=300;
+				c.height=240;
+				var context=c.getContext("2d");
+				var radgrad=context.createRadialGradient(55,55,20,100,100,90);
+				radgrad.addColorStop(0,'#ffffff');
+				radgrad.addColorStop(0.75,'#333333');
+				radgrad.addColorStop(1,'#000000');
+				context.fillStyle=radgrad;
+				context.fillRect(10,10,200,200);
+			}
+		</script>
+	</body>
+</html>

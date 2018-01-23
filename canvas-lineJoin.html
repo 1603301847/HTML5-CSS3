@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mycanvas{
+				border: 1px solid #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+		<script type="text/javascript">
+			window.onload=function draw(){
+				var c=document.getElementById("mycanvas");
+				c.width=600;
+				c.height=300;
+				var context=c.getContext("2d");
+				var lineJoin=['round','bevel','miter'];
+				context.strokeStyle="blue";
+				for(var i=0;i<lineJoin.length;i++){
+					context.lineWidth=25;
+					context.lineJoin=lineJoin[i];
+					context.beginPath();
+					context.moveTo(10+i*150,30);
+					context.lineTo(100+i*150,30);
+					context.lineTo(100+i*150,100);
+					context.stroke();
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=300;
+			c.height=200;
+			var ctx=c.getContext("2d");
+			ctx.fillStyle="#ff00ff";
+			ctx.strokeStyle="blue";
+			ctx.fillRect(20,20,100,100);
+			ctx.strokeRect(20,20,100,100);
+			ctx.save();
+			ctx.fillStyle="#FF0000";
+			ctx.strokeStyle="#00ff00";
+			ctx.fillRect(140,20,100,100);
+			ctx.strokeRect(140,20,100,100);
+			ctx.restore();
+			ctx.fillRect(20,140,50,50);
+			ctx.strokeRect(80,140,50,50);
+			
+		</script>
+	</body>
+</html>

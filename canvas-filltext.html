@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=600;
+			c.height=600;
+			var ctx=c.getContext("2d");
+			ctx.font="20px arial black";
+			ctx.fillText("hello world!",20,50);
+			ctx.font="30px arial black";
+			var grad=ctx.createLinearGradient(0,0,200,0);
+			grad.addColorStop(0,"red");
+			grad.addColorStop(0.5,"purple");
+			grad.addColorStop(1,"blue");
+			ctx.fillStyle=grad;
+			ctx.strokeStyle=grad;
+			var text="hello world!";//创建字符串型变量
+			var mtext=ctx.measureText(text);
+			ctx.strokeText("Merry Christmas!",20,150);
+			ctx.fillText(text,20,250);
+			ctx.fillText(mtext.width,20,300);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=300;
+			c.height=200;
+			var ctx=c.getContext("2d");
+			ctx.strokeStyle="darkmagenta";
+			ctx.beginPath();
+			ctx.moveTo(0,200);
+			ctx.quadraticCurveTo(25,50,300,200);
+			ctx.stroke();
+		</script>
+	</body>
+</html>

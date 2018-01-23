@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mycanvas{
+				border: 1px solid #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+		<script type="text/javascript">
+			window.onload=function draw(){
+				var c=document.getElementById("mycanvas");
+				c.width=600;
+				c.height=600;
+				var context=c.getContext("2d");
+				context.shadowOffsetX=3;
+				context.shadowOffsetY=3;
+				context.shadowBlur=2;
+				context.shadowColor="rgba(0,0,0,0.5)";
+				context.fillStyle="#33ccff";
+				context.fillRect(20,20,300,60);
+				context.fill();
+				context.font="45px 黑体";
+				context.fillStyle="white";
+				context.fillText("Html5+CSS3",30,64);
+			}
+		</script>
+	</body>
+</html>

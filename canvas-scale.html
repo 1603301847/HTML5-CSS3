@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=500;
+			c.height=400;
+			var ctx=c.getContext("2d");
+			ctx.strokeStyle="red";
+			ctx.strokeRect(5,5,100,50);
+			ctx.scale(2,2);
+			ctx.strokeRect(5,5,100,50);
+			ctx.beginPath();
+			ctx.strokeStyle="#006400";
+			ctx.arc(5,5,1,0,Math.PI*2,true);
+			ctx.stroke();
+		</script>
+	</body>
+</html>

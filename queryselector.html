@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*在表格中,需要对table/td单独设置边框,并且给table上设置border-collapse属性,让边框重叠在一起*/
+			table{
+				border: 1px solid #000;
+				border-collapse: collapse; /*边框重叠*/
+			}
+			td{
+				border:1px solid #000;
+				font-size: 2em;
+				
+			}
+			td:hover{
+				background-color: orange;
+			}
+			#hoverResult{
+				color: darkgreen;
+				font-size: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<table>
+				<!--在hbuilder中，复制当前行的快捷键是 ctrl+shift+r-->
+				<!--在Sublime中，复制当前行的快捷键是 ctrl+shift+d-->
+				
+				<tr>
+					<td>1</td>
+					<td>一个人生活</td>
+					<td>温岚</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>让我爱你</td>
+					<td>胡夏</td>
+				</tr>
+			</table>
+			<button type="button" id="findHover" autofocus="autofocus">查看鼠标焦点的目标位置</button>
+			<div id="hoverResult"></div>
+			<script type="text/javascript">
+				document.getElementById("findHover").onclick=function(){
+					var hover=document.querySelector("td:hover");
+					if(hover)
+						document.getElementById("hoverResult").innerText=hover.innerText;
+				}
+			</script>
+			<!--<button type="button" id="findHover"></button>-->
+		</section>
+	</body>
+</html>

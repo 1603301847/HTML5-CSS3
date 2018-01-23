@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=500;
+			c.height=250;
+			var ctx=c.getContext("2d");
+//			ctx.fillStyle="orange";
+			ctx.fillStyle="rgba(255,0,0,0.3)"
+			ctx.strokeStyle="purple";
+			ctx.fillRect(20,20,300,200);
+			ctx.strokeRect(20,20,300,200);
+		</script>
+	</body>
+</html>

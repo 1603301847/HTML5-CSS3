@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="mycanvas" width="900" height="800"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("mycanvas");
+			var context=c.getContext("2d");
+			context.moveTo(100,200);
+			context.lineTo(300,400);
+			context.lineTo(100,600);
+			context.stroke();
+		</script>
+	</body>
+</html>

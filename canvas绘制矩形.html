@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="mycanvas" style="border: 1px solid #000000;" width="500" height="300"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("mycanvas");
+			var context=c.getContext("2d");
+			context.fillStyle="pink";/*矩形填充颜色*/
+			context.fillStyle="rgba(255,255,0,0.4)";
+			context.strokeStyle="orchid";/*图形边框颜色*/
+			context.fillRect(100,100,250,150);/*矩形内容*/
+			context.strokeRect(100,100,250,150);/*图形边框*/
+		</script>
+	</body>
+</html>

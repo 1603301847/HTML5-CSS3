@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas#myCanvas{
+				border: 1px solid #000;
+				/*width: 500px;
+				height: 250px;*/
+				/*不推荐使用CSS定义canvas的宽度和高度，建议通过html属性或者js设定画布的宽度和高度*/
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas" ></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=500;
+			c.height=250;
+			alert(c.height);
+		</script>
+	</body>
+</html>

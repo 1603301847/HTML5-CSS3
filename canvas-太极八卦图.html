@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+				background-color: #aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=300;
+			c.height=300;
+			var ctx=c.getContext("2d");
+			circle(120,80,60,Math.PI/2,Math.PI*3/2,true,"white");
+			circle(120,80,60,Math.PI/2,Math.PI*3/2,false,"black");
+			circle(120,50,30,0,Math.PI*2,false,"black");
+			circle(120,50,4,0,Math.PI*2,false,"white");
+			circle(120,110,30,0,Math.PI*2,false,"white");
+			circle(120,110,4,0,Math.PI*2,false,"black");
+			function circle(x,y,r,rad0,rad1,clock,color){
+				ctx.beginPath();
+				ctx.fillStyle=color;
+				ctx.arc(x,y,r,rad0,rad1,clock);				
+				ctx.fill();
+			}
+			
+			
+		</script>
+	</body>
+</html>

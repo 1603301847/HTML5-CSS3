@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=500;
+			c.height=300;
+			var ctx=c.getContext("2d");
+			ctx.fillStyle="red";
+			ctx.fillRect(50,25,100,100);
+			ctx.fillStyle="green";
+			ctx.beginPath();
+			ctx.arc(150,125,50,0,Math.PI*2,true);
+			ctx.globalCompositeOperation="destination-out";
+			ctx.globalAlpha="0.4";
+			ctx.closePath();
+			ctx.fill();
+		</script>
+	</body>
+</html>

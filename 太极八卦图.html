@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+				background-color: #aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=300;
+			c.height=300;
+			var ctx=c.getContext("2d");
+//			获得画笔
+			ctx.fillStyle="#fff";
+			ctx.arc(120,80,60,Math.PI/2,Math.PI*3/2,true);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.fillStyle="#000000";
+			ctx.arc(120,80,60,Math.PI/2,Math.PI*3/2,false);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.fillStyle="#ffffff";
+			ctx.arc(120,50,30,Math.PI/2,Math.PI*3/2,false);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.fillStyle="#000000";
+			ctx.arc(120,110,30,Math.PI/2,Math.PI*3/2,true);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.arc(120,50,4,0,Math.PI*2,true);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.fillStyle="#ffffff";
+			ctx.arc(120,110,4,0,Math.PI*2,true);
+			ctx.fill();
+			
+			
+		</script>
+	</body>
+</html>

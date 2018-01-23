@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mycanvas{
+				border: 1px solid #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("mycanvas");
+			c.width=600;
+			c.height=500;
+			var context=c.getContext("2d");
+			var img=new Image();
+			img.onload=function(){
+				context.drawImage(img,0,0);
+				context.drawImage(img,30,40,140,180,0,240,140,180);
+			}
+			img.src="img/bg1.jpg";
+		</script>
+	</body>
+</html>

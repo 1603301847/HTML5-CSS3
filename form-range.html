@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#milk{
+				color: red;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>商品购物车</h1>
+		<form action="" method="post">
+			用户名: <input type="text" /><br />
+			密码：    <input type="password" /><br />
+			用户邮箱： <input type="email" /><br />
+			网站地址： <input type="url" /><br />
+			订购数量： <input type="range" min="1" max="20" id="milk_range" onchange="milk()"/>  您订购了<span id="milk"></span>瓶牛奶<br />
+			出生日期：<input type="date" /><br />
+			下单时间：<input type="week" /><br />
+			搜索关键词：<input type="search" /><br />
+			电话号码： <input type="tel" name="telephone"/><br />
+			我喜欢的颜色：<input type="color" />
+			<input type="submit" value="在线下单"/>
+			<script type="text/javascript">
+				var r=document.getElementById("milk_range");
+				var m=document.getElementById("milk");
+//				alert(r.value);
+				function milk(){
+					m.innerText=r.value;
+				}
+			</script>
+		</form>
+	</body>
+</html>

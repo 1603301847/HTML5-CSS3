@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=300;
+			c.height=240;
+			var ctx=c.getContext("2d");
+			var ling=ctx.createLinearGradient(0,0,0,200);
+//			画了一个虚拟的矩形,实现渐变
+			ling.addColorStop(0,"#ff0000");
+			ling.addColorStop(0.5,"#ffff00");
+			ctx.fillStyle=ling;
+			ctx.fillRect(10,10,200,200);
+		</script>
+	</body>
+</html>

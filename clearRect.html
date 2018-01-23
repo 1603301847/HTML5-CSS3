@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas><br />
+		<input type="button" value="清空画布" onclick="clearMap()"/>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=300;
+			c.height=200;
+			var ctx=c.getContext("2d");
+			ctx.strokeStyle="#ff00ff";
+			ctx.beginPath();
+			ctx.arc(200,150,100,-Math.PI/6,-Math.PI*5/6,true);
+			ctx.stroke();
+			function clearMap(){
+				ctx.clearRect(0,0,300,200);
+			}
+		</script>
+	</body>
+</html>

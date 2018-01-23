@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mycanvas{
+				border: 1px solid #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+		<script type="text/javascript">
+		window.onload=function draw(){		
+			var c=document.getElementById("mycanvas");
+			c.width=700;
+			c.height=300;
+			var context=c.getContext("2d");
+			context.translate(200,20);
+			for(var i=1;i<=90;i++){
+				context.save();
+				context.transform(0.95,0,0,0.95,30,30);
+				context.rotate(Math.PI/12);
+				context.beginPath();
+				context.fillStyle="#FF0000";
+				context.globalAlpha="0.4";
+				context.arc(0,0,50,0,Math.PI*2,true);
+				context.closePath();
+				context.fill();
+			}
+			context.setTransform(1,0,0,1,10,10);
+			context.fillStyle="blue";
+			context.fillRect(0,0,50,50);
+			context.fill();
+			}
+		</script>
+	</body>
+</html>

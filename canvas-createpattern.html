@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=600;
+			c.height=600;
+			var ctx=c.getContext("2d");
+			var img=new Image();
+			img.src="images/bg1.jpg";
+			img.onload=function(){
+				var pt=ctx.createPattern(img,"repeat");
+				ctx.fillStyle=pt;
+				ctx.fillRect(0,0,600,600);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=700;
+			c.height=500;
+			var ctx=c.getContext("2d");
+			ctx.beginPath();
+			ctx.strokeStyle="red";
+			ctx.moveTo(100,100);
+			ctx.lineTo(300,100);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.strokeStyle="#FFA500";
+			ctx.moveTo(80,30);
+			ctx.lineTo(250,150);
+			ctx.stroke();
+//			ctx.beginPath();
+//			ctx.moveTo(200,200);
+//			ctx.lineTo(300,300);
+//			ctx.lineTo(200,400);
+//			ctx.stroke();
+			arrow(200,200,300,300,200,400,"red");
+			arrow(250,200,350,300,250,400,"blue");
+			arrow(300,200,400,300,300,400,"purple");
+			function arrow(x1,y1,x2,y2,x3,y3,color){
+				ctx.beginPath();
+				ctx.strokeStyle=color;
+				ctx.moveTo(x1,y1);
+				ctx.lineTo(x2,y2);
+				ctx.lineTo(x3,y3);
+				ctx.stroke();
+				
+			}
+			</script>
+	</body>
+</html>

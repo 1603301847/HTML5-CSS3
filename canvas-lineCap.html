@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=500;
+			c.height=300;
+			var ctx=c.getContext("2d");
+			var lineCap=["butt","round","square"];
+//			字面量表示法初始化数组对象的实例;
+			ctx.strokeStyle="red";
+			ctx.beginPath();
+			ctx.moveTo(10,10);
+			ctx.lineTo(10,150);
+			ctx.moveTo(150,10);
+			ctx.lineTo(150,150);
+			ctx.stroke();
+			ctx.strokeStyle="blue";
+			for(i=0;i<lineCap.length;i++){
+//				利用for循环遍历数组
+				ctx.lineWidth=20;
+				ctx.lineCap=lineCap[i];
+				ctx.beginPath();
+				ctx.moveTo(10,30+i*50);
+				ctx.lineTo(150,30+i*50);
+				ctx.stroke();
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=500;
+			c.height=400;
+			var ctx=c.getContext("2d");
+			draw();
+			function draw(){
+				
+				ctx.fillStyle="orangered";
+			    for(var i=1;i<10;i++)
+			    {
+			    ctx.rotate(10*i*Math.PI/180);
+			    ctx.fillRect(100,30,200,80);
+
+			    }
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>JSON案例</h2>
+		<p>
+			网站名称：<span id="chenglong"></span><br />
+			网站地址：<span id="longge"></span><br />			
+		</p>
+		<script type="text/javascript">
+			var txt='{"name":"cxh","url":"www.qq.com"}';
+			var obj=eval("("+txt+")");
+			document.getElementById("chenglong").innerText=obj.name;
+			document.getElementById("longge").innerText=obj.url;
+		</script>
+	</body>
+</html>

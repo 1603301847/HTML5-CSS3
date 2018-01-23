@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=300;
+			c.height=150;
+			var ctx=c.getContext("2d");
+			for(var i=0;i<15;i++){
+				ctx.strokeStyle="#ff00ff";
+				ctx.beginPath();
+				ctx.arc(0,150,i*10,0,Math.PI*3/2,true);
+				ctx.stroke();
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,p{
+				margin: 0px;
+				padding: 0px;
+			}
+			.pdf{
+				background: url(img/icon_pdf.gif) no-repeat left center;
+				padding-left: 20px;
+			}
+			.ppt{
+				background: url(img/icon_ppt.gif) no-repeat left center;
+				padding-left: 20px;
+			}
+			.xls{
+				background: url(img/icon_xls.gif) no-repeat left center;
+				padding-left: 20px;
+			}
+			.rar{
+				background: url(img/icon_rar.gif) no-repeat left center;
+				padding-left: 20px;
+			}
+			.txt{
+				background: url(img/icon_txt.gif) no-repeat left center;
+				padding-left: 20px;
+			}
+			.window{
+				background: url(img/window.gif) no-repeat left center;
+				padding-left: 20px;
+			}
+		</style>
+		<script src="img/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+			$("a[href$=pdf]").addClass("pdf");
+			$("a[href$=ppt]").addClass("ppt");
+			$("a[href$=xls]").addClass("xls");
+			$("a[href$=rar]").addClass("rar");
+			$("a[href$=txt]").addClass("txt");
+			/*$("a:not([href^=http://www.])").addClass("window");*/
+			$(a:contains("锚点")).addClass("window");
+			})			
+		</script>
+	</head>
+	<body>
+		<p><a href="http://www.baidu.com/name.pdf" >PDF文件</a></p>
+		<p><a href="http://www.baidu.com/name.ppt" >PPT文件</a></p>
+		<p><a href="http://www.baidu.com/name.xls" >XLS文件</a></p>
+		<p><a href="http://www.baidu.com/name.rar" >RAR文件</a></p>
+		<p><a href="http://www.baidu.com/name.txt" >TXT文件</a></p>
+		<p><a href="http://www.baidu.com/name.pdf" >PDF文件</a></p>
+		<p><a href="http://www.baidu.com/name.ppt" >PPT文件</a></p>
+		<p><a href="http://www.baidu.com/name.xls" >XLS文件</a></p>
+		<p><a href="http://www.baidu.com/name.rar" >RAR文件</a></p>
+		<p><a href="http://www.baidu.com/name.txt" >TXT文件</a></p>
+		<p><a href="http://www.baidu.com/name.pdf" >PDF文件</a></p>
+		<p><a href="http://www.baidu.com/name.ppt" >PPT文件</a></p>
+		<p><a href="http://www.baidu.com/name.xls" >XLS文件</a></p>
+		<p><a href="http://www.baidu.com/name.rar" >RAR文件</a></p>
+		<p><a href="http://www.baidu.com/name.txt" >TXT文件</a></p>
+		<p><a href="http://www.baidu.com/name.pdf" >PDF文件</a></p>
+		<p><a href="http://www.baidu.com/name.ppt" >PPT文件</a></p>
+		<p><a href="http://www.baidu.com/name.xls" >XLS文件</a></p>
+		<p><a href="http://www.baidu.com/name.rar" >RAR文件</a></p>
+		<p><a href="http://www.baidu.com/name.txt" >TXT文件</a></p>
+		<p><a href="#anchor">#锚点超链接</a></p>
+		<!--<p><a href="http://baidu.com/">http://www.baidu.com/</a></p>-->
+		<p><a href="http://www.baidu.com/">百度锚点</a></p>
+	</body>
+</html>

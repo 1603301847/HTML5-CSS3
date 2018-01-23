@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=800;
+			c.height=600;
+			var ctx=c.getContext("2d");
+			window.onload=function draw(){
+				ctx.translate(80,80);
+				for(var i=1;i<10;i++){
+					ctx.save();
+					ctx.translate(60*i,0);
+					drawTop("orange");
+					drawbar();
+					ctx.restore();
+				}
+			}
+			function drawTop(fill){
+				ctx.fillStyle=fill;
+//				alert("1");
+				ctx.beginPath();
+				ctx.arc(0,0,30,0,Math.PI,true);
+				ctx.fill();
+			}
+			function drawbar(){
+				ctx.fillStyle="blue";
+				ctx.fillRect(-1.5,0,1.5,40);
+				ctx.beginPath();
+				ctx.strokeStyle="#FF0000";
+				ctx.arc(-5,40,4,Math.PI,Math.PI*2,true);
+				ctx.stroke();
+				ctx.closePath();
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: url(images/bg.jpg) no-repeat;
+			}
+			#toggle{
+				position: absolute;
+				left: 310px;
+				top: 295px;
+			}
+		</style>
+	</head>
+	<body>
+		<audio id="mp3">
+			<source src="medias/Wah Game Loop.mp3" type="audio/mp3"/>
+			<source src="medias/Wah Game Loop.ogg" type="audio/ogg"/>
+			您的浏览器不支持audio标签，请更换！
+		</audio>
+		<button id="toggle" onclick="toggle()">播放</button>
+		<script type="text/javascript">
+			function toggle(){
+//				获得音乐
+				var music=document.getElementById("mp3");
+//				获得按钮
+				var toggle=document.getElementById("toggle");
+				if(music.paused){
+					music.play();
+					toggle.innerText="暂停";
+				}
+				else{
+					music.pause();
+					toggle.innerText="播放";
+				}
+			}
+		</script>
+	</body>
+</html>

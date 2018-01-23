@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border:1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=600;
+			c.height=600;
+			var ctx=c.getContext("2d");
+			window.onload=function draw(){
+				var img=new Image();
+				img.src="images/bg1.jpg";
+				img.onload=function(){
+					var pt=ctx.createPattern(img,"repeat");
+					ctx.fillStyle=pt;
+					ctx.fillRect(0,0,c.width,c.height);
+				}
+			}
+		</script>
+	</body>
+</html>

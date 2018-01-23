@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000;
+				/*background-color: red;*/
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			c.width=500;
+			c.height=300;
+			var ctx=c.getContext("2d");
+			ctx.rect(50,25,200,200);
+			ctx.stroke();
+			ctx.clip();			
+			ctx.fillStyle="#006400"
+			ctx.fillRect(0,0,100,100);
+			</script>
+	</body>
+</html>
